@@ -8,6 +8,7 @@ public class DragDrop : ShopHandling, IPointerDownHandler, IBeginDragHandler, IE
     private RectTransform rectTransform;
     public Canvas canvas;
     private CanvasGroup canvasGroup;
+    public int cost;
 
     private void Awake()
     {

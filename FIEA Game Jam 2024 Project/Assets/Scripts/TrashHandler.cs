@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TrashHandler : MonoBehaviour, IDropHandler
+public class TrashHandler : ShopHandling, IDropHandler
 {
     public void OnDrop(PointerEventData eventData)
     {
@@ -13,6 +13,7 @@ public class TrashHandler : MonoBehaviour, IDropHandler
             // Destroy object held
             Destroy(eventData.pointerDrag);
             // Refund
+            moneySpent -= eventData.pointerDrag.GetComponent<DragDrop>().cost;
         }
     }
 }
