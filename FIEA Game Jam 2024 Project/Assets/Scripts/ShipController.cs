@@ -24,7 +24,7 @@ public class ShipController : MonoBehaviour
         if (moveDirection != Vector3.zero)
         {
             moveDirection.Normalize();
-            transform.forward = moveDirection;
+            transform.right = -moveDirection;
         }
     }
 
