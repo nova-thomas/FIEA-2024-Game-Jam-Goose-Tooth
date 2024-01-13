@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitToMenu : MonoBehaviour
+public class GoToCredits : MonoBehaviour
 {
-    public void SwitchToMainMenu()
+    public void SwitchToCredits()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Credits");
     }
 }

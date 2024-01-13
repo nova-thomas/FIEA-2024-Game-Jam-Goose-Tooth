@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitToMenu : MonoBehaviour
+public class GoToLevelSelect : MonoBehaviour
 {
-    public void SwitchToMainMenu()
+    public void SwitchToLevelSelect()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("LevelSelect");
     }
 }
