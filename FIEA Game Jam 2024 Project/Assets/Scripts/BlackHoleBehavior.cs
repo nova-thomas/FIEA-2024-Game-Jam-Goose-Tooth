@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class BlackHoleBehavior : MonoBehaviour
 {
-    public float force = 1;
     public Rigidbody rb;
     public GameObject ship;
+
+    private void Start()
+    {
+        ship = GameObject.Find("Ship");
+    }
+
 
     // Update is called once per frame
     void FixedUpdate()
