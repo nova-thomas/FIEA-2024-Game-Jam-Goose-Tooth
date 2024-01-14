@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.19044304, g: 0.14302498, b: 0.15245566, a: 1}
+  m_IndirectSpecularColor: {r: 0.1756418, g: 0.13103083, b: 0.13879472, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -324,7 +324,6 @@ GameObject:
   - component: {fileID: 356036583}
   - component: {fileID: 356036585}
   - component: {fileID: 356036584}
-  - component: {fileID: 356036586}
   m_Layer: 0
   m_Name: ObjectHolderHydrogen
   m_TagString: Untagged
@@ -389,18 +388,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356036582}
   m_CullTransparentMesh: 1
---- !u!114 &356036586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356036582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f967c3e5b634949808bba2ce545fc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &371403769
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +485,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UIHolder:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  instantiatedUI:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -618,6 +611,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UIHolder:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  instantiatedUI:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -1026,7 +1025,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22664
+  m_Name: pb_Mesh51600
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1291,6 +1290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragDropManager: {fileID: 0}
+  gameInProgress: 0
 --- !u!222 &618896267
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1429,7 +1429,6 @@ GameObject:
   - component: {fileID: 647035594}
   - component: {fileID: 647035596}
   - component: {fileID: 647035595}
-  - component: {fileID: 647035597}
   m_Layer: 0
   m_Name: ObjectHolderSun
   m_TagString: Untagged
@@ -1494,18 +1493,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647035593}
   m_CullTransparentMesh: 1
---- !u!114 &647035597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647035593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f967c3e5b634949808bba2ce545fc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &656613607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,6 +1738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingPos: {x: 0, y: 0, z: 0}
   shipRB: {fileID: 0}
+  playScript: {fileID: 0}
 --- !u!222 &757521742
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1856,6 +1844,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   UIHolder:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  instantiatedUI:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2294,6 +2288,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  instantiatedUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   levelBuilder: {fileID: 0}
   moneySpent: 0
   rectTransform: {fileID: 0}
@@ -2401,7 +2401,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22588
+  m_Name: pb_Mesh51510
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2927,6 +2927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   draggedSprites: []
+  instantiatedObjects: []
 --- !u!1 &1216762066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2989,11 +2990,17 @@ MonoBehaviour:
   - {fileID: 942579694}
   - {fileID: 868429222}
   UIHolder:
-  - {fileID: 647035593}
-  - {fileID: 2084924899}
-  - {fileID: 1254831151}
-  - {fileID: 1455914817}
-  - {fileID: 356036582}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  instantiatedUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   levelBuilder: {fileID: 1216762066}
   moneySpent: 0
 --- !u!1 &1254831151
@@ -3007,9 +3014,8 @@ GameObject:
   - component: {fileID: 1254831152}
   - component: {fileID: 1254831154}
   - component: {fileID: 1254831153}
-  - component: {fileID: 1254831155}
   m_Layer: 0
-  m_Name: ObjectHolderQuaser
+  m_Name: ObjectHolderQuasar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3072,18 +3078,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254831151}
   m_CullTransparentMesh: 1
---- !u!114 &1254831155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1254831151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f967c3e5b634949808bba2ce545fc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1258993604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3534,6 +3528,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  instantiatedUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   levelBuilder: {fileID: 0}
   moneySpent: 0
   rectTransform: {fileID: 0}
@@ -3748,6 +3748,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  instantiatedUI:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   levelBuilder: {fileID: 0}
   moneySpent: 0
 --- !u!114 &1316154264
@@ -3918,7 +3924,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22698
+  m_Name: pb_Mesh51634
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4087,7 +4093,6 @@ GameObject:
   - component: {fileID: 1455914818}
   - component: {fileID: 1455914820}
   - component: {fileID: 1455914819}
-  - component: {fileID: 1455914821}
   m_Layer: 0
   m_Name: ObjectHolderNebula
   m_TagString: Untagged
@@ -4152,25 +4157,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455914817}
   m_CullTransparentMesh: 1
---- !u!114 &1455914821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455914817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f967c3e5b634949808bba2ce545fc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!43 &1598034418
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22730
+  m_Name: pb_Mesh51666
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4472,7 +4465,6 @@ GameObject:
   - component: {fileID: 2084924900}
   - component: {fileID: 2084924902}
   - component: {fileID: 2084924901}
-  - component: {fileID: 2084924903}
   m_Layer: 0
   m_Name: ObjectHolderBlackHole
   m_TagString: Untagged
@@ -4537,18 +4529,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084924899}
   m_CullTransparentMesh: 1
---- !u!114 &2084924903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084924899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f967c3e5b634949808bba2ce545fc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4443265050435291118
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,18 +8,26 @@ public class OnStop : MonoBehaviour
     public Vector3 startingPos;
     public Rigidbody shipRB;
     private DragDropManager dragDropManager;
+    private GameObject onPlay;
+    public OnPlay playScript;
     void Start()
     {
         ship = GameObject.Find("Ship");
         startingPos = ship.GetComponent<Rigidbody>().position;
         shipRB = ship.GetComponent<Rigidbody>();
         dragDropManager = FindObjectOfType<DragDropManager>();
+        onPlay = GameObject.Find("Play");
+        playScript = onPlay.GetComponent<OnPlay>();
     }
     public void onStopClick()
     {
         // Reset Ship
         ship.transform.position = startingPos;
         shipRB.velocity = Vector3.zero;
+        shipRB.angularVelocity = Vector3.zero;
+
+        // Game not in progress
+        playScript.gameInProgress = false;
 
         // Delete Objects
         foreach (GameObject obj in dragDropManager.instantiatedObjects)

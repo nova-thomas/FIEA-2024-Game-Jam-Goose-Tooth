@@ -5,6 +5,7 @@ using UnityEngine;
 public class OnPlay : MonoBehaviour
 {
     public DragDropManager dragDropManager;
+    public bool gameInProgress = false;
     private void Start()
     {
         GameObject playObject = GameObject.Find("LevelHandler");
@@ -16,18 +17,23 @@ public class OnPlay : MonoBehaviour
 
     public void onPlayClick()
     {
-        // Adding prefabs to playfield
-        dragDropManager.InstantiatePrefabAtPointOnAll();
-
-        // Remove sprites from UI
-        // Hide UI Sprites
-        foreach (DragDrop draggedSprite in dragDropManager.draggedSprites)
+        if (!gameInProgress)
         {
-            if (draggedSprite != null)
+            // Adding prefabs to playfield
+            dragDropManager.InstantiatePrefabAtPointOnAll();
+
+            // Hide UI Sprites
+            foreach (DragDrop draggedSprite in dragDropManager.draggedSprites)
             {
-                draggedSprite.gameObject.SetActive(false);
+                if (draggedSprite != null)
+                {
+                    draggedSprite.gameObject.SetActive(false);
+                }
             }
+
+            // Set the game in progress
+            gameInProgress = true;
         }
+
     }
-    
 }
