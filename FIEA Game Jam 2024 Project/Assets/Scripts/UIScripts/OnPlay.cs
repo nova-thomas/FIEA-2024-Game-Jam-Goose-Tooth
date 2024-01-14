@@ -38,6 +38,7 @@ public class OnPlay : MonoBehaviour
             Vector3 spawnPosition = GetSpawnPosition(draggedSprite.rectTransform);
             dragDropManager.InstantiatePrefabAtPointOnAll(spawnPosition);
         }
+        // Remove sprites from UI
         // Hide UI Sprites
         foreach (DragDrop draggedSprite in dragDropManager.draggedSprites)
         {

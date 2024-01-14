@@ -7,6 +7,7 @@ public class ShopHandling : MonoBehaviour
     public bool[] available = new bool[5];
     public GameObject[] UIElements = new GameObject[5];
     public GameObject[] UIHolder = new GameObject[5];
+    private GameObject[] instantiatedUI = new GameObject[5];
     public GameObject levelBuilder;
     public int moneySpent;
     // Start is called before the first frame update
@@ -14,31 +15,29 @@ public class ShopHandling : MonoBehaviour
     {
         levelBuilder = gameObject;
         moneySpent = 0;
-        Instantiate(UIHolder[0], new Vector3(100, 100, 0), Quaternion.identity, levelBuilder.transform);
-        Instantiate(UIHolder[1], new Vector3(250, 100, 0), Quaternion.identity, levelBuilder.transform);
-        Instantiate(UIHolder[2], new Vector3(400, 100, 0), Quaternion.identity, levelBuilder.transform);
-        Instantiate(UIHolder[3], new Vector3(550, 100, 0), Quaternion.identity, levelBuilder.transform);
-        Instantiate(UIHolder[4], new Vector3(700, 100, 0), Quaternion.identity, levelBuilder.transform);
+
+        // Instantiate UI holders
+        for (int i = 0; i < 5; i++)
+        {
+            Instantiate(UIHolder[i], new Vector3(100 * (i + 1), 100, 0), Quaternion.identity, levelBuilder.transform);
+        }
+
         // Populate holders
-        if (available[0] == true)
+        for (int i = 0; i < 5; i++)
         {
-            Instantiate(UIElements[0], new Vector3(100, 100, 0), Quaternion.identity, levelBuilder.transform);
-        } 
-        if (available[1] == true)
-        {
-            Instantiate(UIElements[1], new Vector3(250, 100, 0), Quaternion.identity, levelBuilder.transform);
+            if (available[i])
+            {
+                instantiatedUI[i] = Instantiate(UIElements[i], new Vector3(100 * (i + 1), 100, 0), Quaternion.identity, levelBuilder.transform);
+            }
         }
-        if (available[2] == true)
+    }
+    public void InstantiateNewUISprite(int spotIndex)
+    {
+        if (available[spotIndex] == false)
         {
-            Instantiate(UIElements[2], new Vector3(400, 100, 0), Quaternion.identity, levelBuilder.transform);
-        }
-        if (available[3] == true)
-        {
-            Instantiate(UIElements[3], new Vector3(550, 100, 0), Quaternion.identity, levelBuilder.transform);
-        }
-        if (available[4] == true)
-        {
-            Instantiate(UIElements[4], new Vector3(700, 100, 0), Quaternion.identity, levelBuilder.transform);
+            available[spotIndex] = true;
+            instantiatedUI[spotIndex] = Instantiate(UIElements[spotIndex], new Vector3(100 * (spotIndex + 1), 100, 0), Quaternion.identity, levelBuilder.transform);
+            Debug.Log("UI Sprite Instantiated at index: " + spotIndex);
         }
     }
 }
