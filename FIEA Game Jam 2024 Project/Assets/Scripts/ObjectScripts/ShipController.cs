@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShipController : MonoBehaviour
+
+
+
 {
+
+    AudioSource m_MyAudioSource;
+
+
+
     private Vector3 lastPos;
     private Rigidbody rb;
-    private GameObject onStopObj;
+    private GameObject onStopObj; 
     private OnStop onStopScr;
     private GameObject WinScreen;
     // Start is called before the first frame update
@@ -17,7 +25,15 @@ public class ShipController : MonoBehaviour
         onStopObj = GameObject.Find("Stop");
         onStopScr = onStopObj.GetComponent<OnStop>();
         WinScreen = GameObject.Find("WinScreen");
+
+
+        m_MyAudioSource = GetComponent<AudioSource>();
+
+
     }
+
+
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -38,6 +54,7 @@ public class ShipController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Kill"))
         {
+            m_MyAudioSource.Play();
             onStopScr.onStopClick();
         }
         if (collision.gameObject.CompareTag("Wormhole"))
