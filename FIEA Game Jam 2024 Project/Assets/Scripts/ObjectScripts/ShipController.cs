@@ -42,6 +42,8 @@ public class ShipController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Wormhole"))
         {
+            Debug.Log("WIN YOU STUPID IDIOT");
+            onStopScr.onStopClick();
             WinScreen.SetActive(true);
         }
     }
