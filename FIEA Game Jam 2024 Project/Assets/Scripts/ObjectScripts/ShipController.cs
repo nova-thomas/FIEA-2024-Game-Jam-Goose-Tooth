@@ -8,6 +8,7 @@ public class ShipController : MonoBehaviour
     private Rigidbody rb;
     private GameObject onStopObj;
     private OnStop onStopScr;
+    private GameObject WinScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class ShipController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         onStopObj = GameObject.Find("Stop");
         onStopScr = onStopObj.GetComponent<OnStop>();
+        WinScreen = GameObject.Find("WinScreen");
     }
 
     // Update is called once per frame
@@ -37,6 +39,10 @@ public class ShipController : MonoBehaviour
         if (collision.gameObject.CompareTag("Kill"))
         {
             onStopScr.onStopClick();
+        }
+        if (collision.gameObject.CompareTag("Wormhole"))
+        {
+            WinScreen.SetActive(true);
         }
     }
 }
