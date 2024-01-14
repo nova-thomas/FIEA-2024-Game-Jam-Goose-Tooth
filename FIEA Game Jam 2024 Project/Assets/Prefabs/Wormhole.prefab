@@ -57,15 +57,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eaa78851e884b94eab5f35cf1509645, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eaa78851e884b94eab5f35cf1509645, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 37.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eaa78851e884b94eab5f35cf1509645, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6eaa78851e884b94eab5f35cf1509645, type: 3}
       propertyPath: m_LocalPosition.x
@@ -107,6 +107,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6eaa78851e884b94eab5f35cf1509645, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 83cf5b97934fb044bb9141cdfcd28f62, type: 2}
     - target: {fileID: 919132149155446097, guid: 6eaa78851e884b94eab5f35cf1509645, type: 3}
       propertyPath: m_Name
       value: Wormhole

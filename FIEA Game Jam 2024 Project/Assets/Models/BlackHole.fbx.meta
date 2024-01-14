@@ -21,7 +21,12 @@ ModelImporter:
   - first:
       74: 3320602188908277771
     second: Holw|CircleAction.005
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackHole
+    second: {fileID: 7723724522167151999, guid: 1943013e42e3caa4a907cb38b5066572, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

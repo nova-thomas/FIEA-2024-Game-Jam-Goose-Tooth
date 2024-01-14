@@ -3,7 +3,12 @@ guid: 33a83747daaa96f41aa9ea9e11a52331
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpeedCloud
+    second: {fileID: -7996691315876394340, guid: 33a83747daaa96f41aa9ea9e11a52331, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: 6997882522552206460
     second: Circle|CircleAction
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sun
+    second: {fileID: 1029666385738175954, guid: e7fd382e8cd8faa4e978f4fd6c6ac90b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
