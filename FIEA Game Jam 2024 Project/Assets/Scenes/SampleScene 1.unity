@@ -206,13 +206,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 618896263}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 618896265}
+        m_TargetAssemblyTypeName: OnPlay, Assembly-CSharp
+        m_MethodName: onPlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -265,7 +265,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4102733196270931435, guid: c3e5d42e8af9a0640a16bbbb729f6753, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4102733196270931435, guid: c3e5d42e8af9a0640a16bbbb729f6753, type: 3}
       propertyPath: m_LocalPosition.x
@@ -506,6 +506,8 @@ MonoBehaviour:
   levelBuilder: {fileID: 0}
   moneySpent: 0
   canvas: {fileID: 0}
+  mainCamera: {fileID: 0}
+  prefabToInstantiate: {fileID: 4018118854125771737, guid: 763d3a435956bb045a00fe40f3c5655b, type: 3}
   cost: 0
 --- !u!225 &371403774
 CanvasGroup:
@@ -624,6 +626,8 @@ MonoBehaviour:
   levelBuilder: {fileID: 0}
   moneySpent: 0
   canvas: {fileID: 0}
+  mainCamera: {fileID: 0}
+  prefabToInstantiate: {fileID: 8284666059345960927, guid: bdf077b1f2318c042b3ed668b4c0c792, type: 3}
   cost: 0
 --- !u!225 &433225092
 CanvasGroup:
@@ -1369,6 +1373,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621809254}
   m_CullTransparentMesh: 1
+--- !u!1 &646993354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 646993356}
+  - component: {fileID: 646993355}
+  m_Layer: 0
+  m_Name: PlayField
+  m_TagString: PlayField
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &646993355
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646993354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 64.17407, y: 1, z: 39.61602}
+  m_Center: {x: 8.904463, y: 0, z: -0.25876617}
+--- !u!4 &646993356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646993354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.153591, y: -2, z: 0.3876536}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647035593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -95.183, z: 0}
 --- !u!1 &757521738
 GameObject:
@@ -1700,6 +1748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126770fed1a137d4080f53a0acfb536b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingPos: {x: 0, y: 0, z: 0}
+  shipRB: {fileID: 0}
 --- !u!222 &757521742
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1813,6 +1863,8 @@ MonoBehaviour:
   levelBuilder: {fileID: 0}
   moneySpent: 0
   canvas: {fileID: 0}
+  mainCamera: {fileID: 0}
+  prefabToInstantiate: {fileID: 7177597368362819671, guid: e624f2ad6d8a8e142a5ba4e7647075f5, type: 3}
   cost: 0
 --- !u!225 &868429227
 CanvasGroup:
@@ -2244,6 +2296,8 @@ MonoBehaviour:
   levelBuilder: {fileID: 0}
   moneySpent: 0
   canvas: {fileID: 0}
+  mainCamera: {fileID: 0}
+  prefabToInstantiate: {fileID: 896482548499842330, guid: 452a21f193d9d06469b2835ab1961b66, type: 3}
   cost: 0
 --- !u!225 &942579699
 CanvasGroup:
@@ -3468,6 +3522,8 @@ MonoBehaviour:
   levelBuilder: {fileID: 0}
   moneySpent: 0
   canvas: {fileID: 0}
+  mainCamera: {fileID: 0}
+  prefabToInstantiate: {fileID: 6201660028653986288, guid: 2ef879c657443054dbc822cfdcc97caa, type: 3}
   cost: 0
 --- !u!225 &1296546485
 CanvasGroup:
@@ -3564,13 +3620,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 757521738}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 757521740}
+        m_TargetAssemblyTypeName: OnStop, Assembly-CSharp
+        m_MethodName: onStopClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3746,7 +3802,7 @@ Transform:
   m_Children:
   - {fileID: 656613608}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1355331452
 GameObject:
@@ -4491,7 +4547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7881010946566500377, guid: 8969a8ccec9efe347b679590e19ff50e, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7881010946566500377, guid: 8969a8ccec9efe347b679590e19ff50e, type: 3}
       propertyPath: m_LocalPosition.x

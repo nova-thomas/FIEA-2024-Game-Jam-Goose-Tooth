@@ -7,6 +7,9 @@ public class Wormhole : MonoBehaviour
     // Check collision with ship
     public void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("Ship"))
+        {
+            // Win level
+        }
     }
 }

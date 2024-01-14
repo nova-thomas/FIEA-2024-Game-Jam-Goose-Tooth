@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,46 +6,55 @@ using UnityEngine.EventSystems;
 
 public class DragDrop : ShopHandling, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    private RectTransform rectTransform;
+    public RectTransform rectTransform;
     public Canvas canvas;
     private CanvasGroup canvasGroup;
+    public GameObject prefabToInstantiate;
+    private DragDropManager dragDropManager;
     public int cost;
 
-    private void Awake()
+    public void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
+        dragDropManager = FindObjectOfType<DragDropManager>();
         //Check if it is above holder, then snap
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("OnBeginDrag");
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag");
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
         // If on screen, drop it, use money (set only taking money once), and put a new instance of ui in holder
+        if (dragDropManager != null && !dragDropManager.draggedSprites.Contains(this))
+        {
+            dragDropManager.draggedSprites.Add(this);
+        }
 
         // If on holder, put back
 
         // If on trash, refund
     }
 
+    public void InstantiatePrefabAtPoint(Vector3 pos)
+    {
+        Instantiate(prefabToInstantiate, pos, Quaternion.identity);
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown");
+        
     }
 }

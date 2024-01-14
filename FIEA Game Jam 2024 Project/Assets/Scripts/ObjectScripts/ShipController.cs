@@ -28,11 +28,11 @@ public class ShipController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Kill"))
+        if (collision.gameObject.CompareTag("Kill"))
         {
-            // Fail level
+            // End level
         }
     }
 }
