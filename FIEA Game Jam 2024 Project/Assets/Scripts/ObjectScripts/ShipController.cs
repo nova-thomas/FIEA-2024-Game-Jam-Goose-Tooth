@@ -6,11 +6,15 @@ public class ShipController : MonoBehaviour
 {
     private Vector3 lastPos;
     private Rigidbody rb;
+    private GameObject onStopObj;
+    private OnStop onStopScr;
     // Start is called before the first frame update
     void Start()
     {
         lastPos = transform.position;
         rb = GetComponent<Rigidbody>();
+        onStopObj = GameObject.Find("Stop");
+        onStopScr = onStopObj.GetComponent<OnStop>();
     }
 
     // Update is called once per frame
@@ -32,7 +36,7 @@ public class ShipController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Kill"))
         {
-            // End level
+            onStopScr.onStopClick();
         }
     }
 }

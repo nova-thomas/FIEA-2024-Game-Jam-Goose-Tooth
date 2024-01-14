@@ -501,7 +501,7 @@ MonoBehaviour:
   rectTransform: {fileID: 0}
   canvas: {fileID: 0}
   prefabToInstantiate: {fileID: 4018118854125771737, guid: 763d3a435956bb045a00fe40f3c5655b, type: 3}
-  cost: 10
+  cost: 1000
 --- !u!225 &371403774
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -627,7 +627,7 @@ MonoBehaviour:
   rectTransform: {fileID: 0}
   canvas: {fileID: 0}
   prefabToInstantiate: {fileID: 8284666059345960927, guid: bdf077b1f2318c042b3ed668b4c0c792, type: 3}
-  cost: 10
+  cost: 1000
 --- !u!225 &433225092
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1911,7 +1911,7 @@ MonoBehaviour:
   rectTransform: {fileID: 0}
   canvas: {fileID: 0}
   prefabToInstantiate: {fileID: 7177597368362819671, guid: e624f2ad6d8a8e142a5ba4e7647075f5, type: 3}
-  cost: 10
+  cost: 250
 --- !u!225 &868429227
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2350,7 +2350,7 @@ MonoBehaviour:
   rectTransform: {fileID: 0}
   canvas: {fileID: 0}
   prefabToInstantiate: {fileID: 896482548499842330, guid: 452a21f193d9d06469b2835ab1961b66, type: 3}
-  cost: 10
+  cost: 250
 --- !u!225 &942579699
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3669,7 +3669,7 @@ MonoBehaviour:
   rectTransform: {fileID: 0}
   canvas: {fileID: 0}
   prefabToInstantiate: {fileID: 6201660028653986288, guid: 2ef879c657443054dbc822cfdcc97caa, type: 3}
-  cost: 10
+  cost: 1500
 --- !u!225 &1296546485
 CanvasGroup:
   m_ObjectHideFlags: 0
