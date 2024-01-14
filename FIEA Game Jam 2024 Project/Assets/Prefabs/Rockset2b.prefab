@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6841818893729957060}
   - component: {fileID: 7592186740574227297}
   - component: {fileID: 5672330822410796971}
+  - component: {fileID: 2221226508350683166}
   m_Layer: 0
   m_Name: Rockset2b
   m_TagString: Kill
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2221226508350683166
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176922890158792318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.010595391, y: 0.018231856, z: 0.009977553}
+  m_Center: {x: -0.0020401566, y: 0.00197788, z: 0.0008568387}
