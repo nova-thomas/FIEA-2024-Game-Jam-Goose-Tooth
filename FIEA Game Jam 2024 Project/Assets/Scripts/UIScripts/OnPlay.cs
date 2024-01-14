@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class OnPlay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void onPlayClick()
     {
-        
-    }
+        // Remove sprites from UI
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Add prefabs to playfield
     }
 }

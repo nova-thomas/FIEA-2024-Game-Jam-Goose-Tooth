@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class OnStop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void onStopClick()
     {
-        
-    }
+        // Reset Ship
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Delete Objects
+
+        // Place UI Sprites Down
     }
 }
