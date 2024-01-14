@@ -13,6 +13,8 @@ public class DragDrop : ShopHandling, IBeginDragHandler, IEndDragHandler, IDragH
     private DragDropManager dragDropManager;
     private GameObject shopHandlerObj;
     private ShopHandling shopHandling;
+    private GameObject updateMoneyObj;
+    private UpdateMoney updateMoney;
     Vector2 originalPos;
     public int cost;
 
@@ -25,7 +27,8 @@ public class DragDrop : ShopHandling, IBeginDragHandler, IEndDragHandler, IDragH
         shopHandlerObj = GameObject.Find("LevelBuilder");
         shopHandling = shopHandlerObj.GetComponent<ShopHandling>();
         originalPos = gameObject.transform.position;
-        //Check if it is above holder, then snap
+        updateMoneyObj = GameObject.Find("Money");
+        updateMoney = updateMoneyObj.GetComponent<UpdateMoney>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -48,11 +51,9 @@ public class DragDrop : ShopHandling, IBeginDragHandler, IEndDragHandler, IDragH
         {
             dragDropManager.draggedSprites.Add(this);
             shopHandling.InstantiateUIElement(GetObjectIndexByName(gameObject.name), originalPos);
+            shopHandling.moneySpent += cost;
+            updateMoney.UpdateUIText(shopHandling.moneySpent);
         }
-
-        // If on holder, put back
-
-        // If on trash, refund
     }
 
     public void InstantiatePrefabAtPoint(Vector3 pos)

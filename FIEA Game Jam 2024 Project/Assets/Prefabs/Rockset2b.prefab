@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5672330822410796971}
   m_Layer: 0
   m_Name: Rockset2b
-  m_TagString: Untagged
+  m_TagString: Kill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
