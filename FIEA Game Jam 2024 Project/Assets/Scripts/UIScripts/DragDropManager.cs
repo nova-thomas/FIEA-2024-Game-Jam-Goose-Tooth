@@ -5,6 +5,7 @@ using UnityEngine;
 public class DragDropManager : MonoBehaviour
 {
     public List<DragDrop> draggedSprites = new List<DragDrop>();
+    public List<GameObject> instantiatedObjects = new List<GameObject>();
 
     public void InstantiatePrefabAtPointOnAll(Vector3 pos)
     {
@@ -12,7 +13,8 @@ public class DragDropManager : MonoBehaviour
         {
             if (scriptInstance != null)
             {
-                scriptInstance.InstantiatePrefabAtPoint(pos);
+                GameObject instantiatedObject = Instantiate(scriptInstance.prefabToInstantiate, pos, Quaternion.identity);
+                instantiatedObjects.Add(instantiatedObject);
             }
         }
     }

@@ -16,15 +16,14 @@ public class OnPlay : MonoBehaviour
     public Vector3 GetSpawnPosition(RectTransform rectTransform)
     {
         // Use ray to find the position based on the individual dragged sprite
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(rectTransform.position);
-        Ray ray = Camera.main.ScreenPointToRay(screenPos);
+        Ray ray = Camera.main.ScreenPointToRay(rectTransform.position);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit) && hit.collider.CompareTag("PlayField"))
         {
+            Debug.DrawRay(ray.origin, ray.direction * 200f, Color.red);
             float fixedY = 0f;
             Vector3 spawnPos = new Vector3(hit.point.x, fixedY, hit.point.z);
-            Debug.Log("Spawn Position: " + spawnPos);
             return spawnPos;
         }
         Debug.Log("Spawn Position: Not Hit");
@@ -39,8 +38,14 @@ public class OnPlay : MonoBehaviour
             Vector3 spawnPosition = GetSpawnPosition(draggedSprite.rectTransform);
             dragDropManager.InstantiatePrefabAtPointOnAll(spawnPosition);
         }
-        // Remove sprites from UI
-
+        // Hide UI Sprites
+        foreach (DragDrop draggedSprite in dragDropManager.draggedSprites)
+        {
+            if (draggedSprite != null)
+            {
+                draggedSprite.gameObject.SetActive(false);
+            }
+        }
     }
     
 }
