@@ -499,7 +499,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh45130
+  m_Name: pb_Mesh23218
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1196,7 +1196,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh45110
+  m_Name: pb_Mesh23196
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2079,7 +2079,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh45152
+  m_Name: pb_Mesh23246
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2243,7 +2243,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh45164
+  m_Name: pb_Mesh23258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2454,22 +2454,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5227598836807951845, guid: 2dfd77632263f874690f1a6d67c7375d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5227598836913320318, guid: 2dfd77632263f874690f1a6d67c7375d, type: 3}
-      propertyPath: available.Array.data[1]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5227598836913320318, guid: 2dfd77632263f874690f1a6d67c7375d, type: 3}
-      propertyPath: available.Array.data[2]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5227598836913320318, guid: 2dfd77632263f874690f1a6d67c7375d, type: 3}
-      propertyPath: available.Array.data[3]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5227598836913320318, guid: 2dfd77632263f874690f1a6d67c7375d, type: 3}
-      propertyPath: available.Array.data[4]
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
