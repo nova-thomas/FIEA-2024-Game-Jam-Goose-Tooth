@@ -23,6 +23,7 @@ public class OnStop : MonoBehaviour
     {
         // Reset Ship
         ship.transform.position = startingPos;
+        ship.transform.rotation =  Quaternion.identity;
         shipRB.velocity = Vector3.zero;
         shipRB.angularVelocity = Vector3.zero;
 
